@@ -245,15 +245,14 @@ body {
   flex-basis: calc((100% - 90px) / 4);
 }
 
-.benefits-icon {
+/* .benefits-icon {
   width: 70px;
   height: 70px;
-}
+} */
 
 .bg-icon {
   padding: 25px 100px;
   margin-bottom: 30px;
-  width: 270px;
   height: 120px;
   border-radius: 4px;
   background-color: #f5f4fa;
@@ -340,8 +339,6 @@ body {
 }
 
 .soc-icon {
-  width: 20px;
-  height: 20px;
   fill: #afb1b8;
 }
 
@@ -354,6 +351,10 @@ body {
   fill: #ffffff;
 }
 
+.soc-link:focus .soc-icon {
+  fill: #ffffff;  
+}
+
 /* _______________CLIENTS___________________ */
 
 .clients-list {
@@ -364,7 +365,6 @@ body {
 }
 
 .clients-list-item {
-  width: 170px;
   height: 92px;
   flex-basis: calc((100% - 150px) / 6);
 }
@@ -380,6 +380,10 @@ body {
   justify-content: center;
 }
 
+.clients-icon {
+  fill: #afb1b8;
+}
+
 .clients-list-link:hover,
 .clients-list-link:focus {
   border: 1px solid #2196f3;
@@ -389,11 +393,12 @@ body {
   fill: var(--accent-color);
 }
 
-.clients-icon {
-  width: 106px;
-  height: 60px;
-  fill: #afb1b8;
+.clients-list-link:focus .clients-icon {
+  fill: var(--accent-color);
 }
+
+
+
 
 /* ____________FOOTER________________ */
 
@@ -520,7 +525,14 @@ body {
   margin-top: var(--card-set-gap);
 }
 
-.post-list-item:hover {
+
+.post-list-link{
+  display: block;
+  text-decoration: inherit;
+}
+
+.post-list-link:hover,
+.post-list-link:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
